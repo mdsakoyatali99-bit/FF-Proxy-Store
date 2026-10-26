@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#070b14">
+    <title>FF Proxy Store - VIP File Unlocker</title>
+    <link rel="preconnect" href="https://www.profitableratecpmnetwork.com" crossorigin>
+    <link rel="preconnect" href="https://www.highrevenueformat.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="bg-art" aria-hidden="true"><i></i><i></i><i></i></div>
+
+    <!-- AdBlock Warning Overlay -->
+    <div id="adblock-overlay" class="overlay" style="display:none;">
+        <div class="overlay-card">
+            <h2>⚠️ AdBlocker Detected!</h2>
+            <p>আপনার ব্রাউজারে AdBlocker অন করা রয়েছে। ফাইলটি আনলক করতে অনুগ্রহ করে AdBlocker ডিজেবল/বন্ধ করুন এবং পেজটি রিফ্রেশ দিন।</p>
+            <button class="btn" onclick="location.reload()">🔄 পেজ রিফ্রেশ দিন</button>
+        </div>
+    </div>
+
+    <!-- Full-screen ad view (plain, no app branding; timer runs internally) -->
+    <div id="timer-overlay" class="adview" style="display:none;">
+        <div class="adload"><i></i></div>
+        <iframe id="ad-frame" title="Ad" referrerpolicy="no-referrer" sandbox="allow-scripts allow-forms allow-popups allow-same-origin"></iframe>
+        <button class="adx adr" onclick="reloadAd()" aria-label="Reload">↻</button>
+        <button class="adx" onclick="cancelAd()" aria-label="Close">✕</button>
+    </div>
+
+    <!-- Header Banner -->
+    <div class="banner-box">
+        <iframe class="adslot" data-key="1eabb1d73fecf4309a0b7bd217998b55" data-w="320" data-h="50" width="320" height="50" scrolling="no" frameborder="0" title="Ad"></iframe>
+    </div>
+
+    <div class="container" id="main-container">
+        <div class="header">
+            <h1 id="site-title">FF Proxy Server 99</h1>
+            <p>প্রিমিয়াম ফ্রি ফায়ার প্রক্সি ফাইল আনলকার সিস্টেম</p>
+        </div>
+
+        <!-- Middle Banner -->
+        <div class="banner-box" style="padding: 10px;">
+            <iframe class="adslot" data-key="0be2c684d6912ed901d55635badbac5e" data-w="300" data-h="250" width="300" height="250" scrolling="no" frameborder="0" title="Ad"></iframe>
+        </div>
+
+        <div class="content-body">
+            <div class="banner-box" >
+                    <iframe class="adslot" data-key="1eabb1d73fecf4309a0b7bd217998b55" data-w="320" data-h="50" width="320" height="50" scrolling="no" frameborder="0" title="Ad"></iframe>
+                </div>
+
+            <div class="info-card">
+                <h3>⚠️ ফাইল আনলক করার নিয়ম:</h3>
+                <p>নিচের বাটনে ক্লিক করুন। একটি এড উইন্ডো খুলবে এবং <b>১৫ সেকেন্ড</b> কাউন্টডাউন চলবে। সময় শেষ হলে এড নিজে থেকেই বন্ধ হয়ে আপনি এই পেজে ফিরে আসবেন। এভাবে মোট <b>১০টি ধাপ</b> সম্পন্ন করুন।</p>
+            </div>
+
+            <div class="steps" id="steps"></div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <div class="progress-text" id="progress-text">টাস্ক সম্পন্ন হয়েছে: ০ / ১০</div>
+            </div>
+
+            <div class="status-msg" id="status-msg"></div>
+
+            <button class="btn" id="action-btn" onclick="handleTaskClick()">
+                <span id="btn-text">🚀 ভিজিট করুন (ধাপ ১/১০)</span>
+            </button>
+            <a id="video-btn" class="btn ghost" style="display:none;text-align:center;text-decoration:none;color:#fff" target="_blank" rel="noopener">▶️ নিয়ম ও সেটআপ ভিডিও দেখুন</a>
+            <a id="video-btn" class="btn ghost vid" href="#" target="_blank" rel="noopener" style="display:none;text-align:center;text-decoration:none;color:#fff;line-height:1.6">▶ সেটআপ ও নিয়মের ভিডিও দেখুন</a>
+            <div class="banner-box" style="padding:10px;">
+        <iframe class="adslot" data-key="0be2c684d6912ed901d55635badbac5e" data-w="300" data-h="250" width="300" height="250" scrolling="no" frameborder="0" title="Ad"></iframe>
+    </div>
+            <div class="trust"><span>🔒 নিরাপদ</span><span>⚡ অটো রিটার্ন</span><span>🎁 ফ্রি</span></div>
+        </div>
+    </div>
+
+    <!-- Bottom Banner -->
+    <div class="banner-box">
+        <iframe class="adslot" data-key="8fe85ced4b08ded7e1974661a3de6cbd" data-w="728" data-h="90" width="728" height="90" scrolling="no" frameborder="0" title="Ad"></iframe>
+    </div>
+
+    <p class="footer">© FF Proxy Store • <a href="https://ffproxystore.netlify.app" target="_blank" rel="noopener">ffproxystore.netlify.app</a></p>
+
+    <!-- Notification-style sticky banner (clearly labelled Sponsored). Paste your own unit key to change it -->
+    <div id="notif-ad" class="ad-toast">
+        <span class="ad-tag">SPONSORED</span>
+        <button class="ad-close" onclick="hideToast()" aria-label="Close">✕</button>
+        <div class="ad-toast-in">
+            <iframe id="notif-frame" class="adslot" data-key="1eabb1d73fecf4309a0b7bd217998b55" data-w="320" data-h="50" width="320" height="50" scrolling="no" frameborder="0" title="Ad"></iframe>
+        </div>
+    </div>
+
+    <!-- Ad Network Scripts -->
+    <script async="async" data-cfasync="false" src="https://pl30769824.profitableratecpmnetwork.com/802610cb4498e91df9a3d1b79dc6b494/invoke.js"></script>
+    <div id="container-802610cb4498e91df9a3d1b79dc6b494"></div>
+    <script async src="https://pl30754740.profitableratecpmnetwork.com/49/63/a0/4963a0c69af6e3dc9e283ebc4d963b53.js"></script>
+    <script async src="https://pl30754739.profitableratecpmnetwork.com/e5/d8/61/e5d8610b79f44af26258bb4187764da9.js"></script>
+
+    <!-- Custom JavaScript Files -->
+    <script defer src="js/site-config.js"></script>
+    <script defer src="js/adblock-check.js"></script>
+    <script defer src="js/app.js"></script>
+</body>
+</html>
